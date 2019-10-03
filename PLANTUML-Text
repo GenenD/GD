@@ -1,0 +1,12 @@
+@startuml
+skinparam class {
+	BackgroundColor White
+	ArrowColor Black
+	BorderColor Black
+}
+class "Строитель" as P {
+ Бетономешалка
+Фундамент Залить (Бетон, В соответствии чертежам)
+}
+hide circle
+@enduml
