@@ -1,0 +1,26 @@
+@startuml
+skinparam class {
+	BackgroundColor White
+	ArrowColor Black
+	BorderColor Black
+}
+class Module as "Модули"
+
+class Screen as "Экранная форма"
+class Print as "Печатная форма"
+
+class RequestInput as "Форма ввода запроса"
+class DocumentManagement as "Форма работы с документами"
+class Report as "Форма отчета"
+
+Module <|-- Screen 
+Module <|-- Print 
+
+Screen <|-- RequestInput 
+Screen <|-- DocumentManagement 
+Print <|-- Report 
+
+hide members
+hide circle
+hide methods
+@enduml
