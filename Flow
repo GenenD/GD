@@ -1,0 +1,43 @@
+@startuml
+skinparam class {
+	BackgroundColor White
+	ArrowColor Black
+	BorderColor Black
+}
+class Flow as "Потоки"
+
+class InputFlow as "Входящие потоки"
+class InputFlowInformation as "Информационные"
+class EmployeeRequest as "Запрос сотрудника"
+
+class ControllingFlow as "Потоки управления"
+class ControlFlowInformation as "Информационные"
+class UserManual as "Руководство пользователя"
+class SystemSpecifications as "Технические характеристики системы"
+class JobDescription as "Должностная инструкция сотрудника"
+
+class OutputFlow as "Выходящие потоки"
+class OutputMaterial as "Материальные"
+class Report as "Отчет"
+
+
+Flow <|-- ControllingFlow 
+Flow <|-- InputFlow 
+Flow <|-- OutputFlow 
+
+InputFlow <|-- InputFlowInformation 
+OutputFlow <|-- OutputMaterial 
+ControllingFlow <|-- ControlFlowInformation 
+
+InputFlowInformation  <|-- EmployeeRequest 
+
+OutputMaterial <|-- Report
+
+ControlFlowInformation <|-- UserManual 
+ControlFlowInformation <|-- SystemSpecifications 
+ControlFlowInformation <|-- JobDescription 
+
+hide members
+hide circle
+hide methods
+@enduml
