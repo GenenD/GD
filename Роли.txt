@@ -6,17 +6,19 @@ skinparam class {
 }
 class Role as "Роли"
 
-class Inside as "Внутренние"
+class People as "Люди"
+class Things as "Инструменты"
 
 class Employee as "Сотрудник"
 class Documents as "Документы"
 class Subsystem as "Подсистема обработки данных"
 
-Role <|-- Inside 
+Role <|-- People 
+Role <|-- Things 
 
-Inside <|-- Employee 
-Inside <|-- Documents 
-Inside <|-- Subsystem 
+People <|-- Employee 
+Things <|-- Documents 
+Things <|-- Subsystem 
 
 hide members
 hide circle
